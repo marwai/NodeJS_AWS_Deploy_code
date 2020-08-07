@@ -94,15 +94,12 @@ between two remote hosts. It is based on the Secure Shell (SSH) protocol.
 To sync directorys from your OS to your VM you mut know the VMs IP address and the directory name of which you want to
  sync. use the following command:
 
-``` scp -i ~/.ssh/DevOpsStudents.pem -r app/ ubuntu@52.48.95.163:~/app/ ```
 
 Now we sync the environments directory as our ```provision.sh``` file is inside:
 
-``` scp -i ~/.ssh/DevOpsStudents.pem -r environment/ ubuntu@52.48.95.163:~/env/ ```
 
 If an error occurs when trying to sinc use the following command:
 
-``` scp -o "IdentitiesOnly yes" -i ~/.ssh/DevOpsStudents.pem -r app/ ubuntu@52.48.95.163:~/app/ ```
 
 Once the provision and app directorys have been moved into the VM. inside the VM we can run ```node app.js```
 
