@@ -15,6 +15,18 @@
   sudo apt-get install -y nodejs
   sudo apt-get install npm -y
 
+# Configuring nginx proxy
+
+
+# Maing the default file inactive
+  sudo unlink /etc/nginx/sites-enabled/default # test
+
+# remove the old file and add our one
+  sudo rm /etc/nginx/sites-available/default # test
+  sudo ln -s /home/ubuntu/environment/app/nginx.default /etc/nginx/sites-available/default # test
+  sudo service nginx restart # test
+
+
 # Install the npm dependencies
   sudo apt-get update
 
@@ -26,5 +38,6 @@
   sudo npm install pm2 -g
 
 # Pm2 manages the application
-  pm2 stop app.js
-  pm2 start app.js
+  # pm2 stop app.js
+  pm2 stop all # works anywhere and not just in the folder
+  pm2 start app.js -f
