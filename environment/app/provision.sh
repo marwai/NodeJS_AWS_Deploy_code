@@ -39,5 +39,5 @@
 
 # Pm2 manages the application
   # pm2 stop app.js
-  pm2 stop all # works anywhere and not just in the folder
-  pm2 start app.js -f
+  # pm2 stop all # works anywhere and not just in the folder
+  # pm2 start app.js -f

@@ -1,12 +1,11 @@
-# readme  
 # Environments
 An environment in terms of programming is a location where we would deploy the code. There can be several different environments.
 
 Overview
 - Notes
-    - [What is AWS?](#What-is-AWS?)
+    - [What is AWS?](What-is-AWS?)
 - Instructions
-    - [Creating a E2 Instance](#Creating-an-instance)
+    - [Creating a E2 Instance](Creating-an-instance)
     - [Provisioning](#Provisioning)
     - [Commands for Syncing the OS and VM and entering the vm](#Commands-for-Syncing-the-OS-and-VM-and-entering-the-vm)
 
@@ -18,8 +17,9 @@ Services) as a secured cloud services platform.
 Aws is the infrastructure as a service, One key thing it provides is a global infrastructure.
 Allows us to rent infrastructure per second.
 
+# Full Guide of Instructions
 
-# Creating a E2 instance
+## Creating a E2 instance
 
 #### Once on the AWS dashboard, click on services and then under computer select EC2
 ![E21](images/E21.png)
@@ -28,7 +28,29 @@ Allows us to rent infrastructure per second.
 ![E22](images/E22.png)
 
 # Entering the Instance
+1. First download the file to enter the EC2 instance
+2. The folder will be found in the downloads folder. In Git Bash run  the following command in the terminal 
+    $ cd
+    $ cd downloads/ 
+   
+3. Move the folder into a safe location where the ```.ssh keys``` are stored
+       
+       $ mv DevOpsStudents\ \(2\).pem ~/.ssh
+    ```mv``` moves the ```DevOpsStudents\ \(2\).pem``` into ```~```  (home directory) 
+    and finally into the ssh folder  
 
+4. __Enter the .ssh folder__   
+   The ```.```ssh means the folder is hidden. However you are a developer so you have the power to changing, 
+deleting, or moving around 
+what you please, but with care*
+ 
+        $ cd ~/.ssh
+    
+5. You can enter run the Secure shell command to enter the EC2 virtual machine 
+
+        ssh -i ~/.ssh/DevOpsStudents\ \(2\).pem ubuntu@52.214.19.30
+    
+    
 # Provisioning
 
 ![prov1](images/prov1.png)
