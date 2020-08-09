@@ -36,6 +36,10 @@ recommended to run T2 micro machine for cost efficiency.
 
         $ ./provision.sh
 
+# Working code
+
+![picutre](images/proof%20of%20working%20code%20with%20mongodb.PNG)
+
 __ERRORS__ needs formatting
 
 Errors
