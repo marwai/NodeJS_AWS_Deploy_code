@@ -10,8 +10,7 @@
 
   sudo rm /etc/mongod.conf
 # ln creates symbolic link
-  sudo ln -s /home/ubuntu/environment/db/mongod.conf /etc/mongod.conf
-  sudo DB_HOST="mongodb://localhost:27017/posts"
+  sudo ln -s /home/ubuntu/db/mongod.conf /etc/mongod.conf
 
 # If mongo is set up correctly
   sudo systemctl restart mongod

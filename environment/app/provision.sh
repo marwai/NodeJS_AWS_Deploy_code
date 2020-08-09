@@ -29,17 +29,16 @@
   sudo service nginx restart # test
 
 
-# Install the npm dependencies
-  sudo apt-get update
+
 
 # Connecting to local hosts
-  export DB_HOST=mongodb://ubuntu@34.244.187.147:27017/posts?authSource=admin
+  export DB_HOST=mongodb://34.244.187.147:27017/posts
   sudo apt-get update
 
 # To get into the app folder, you need to navigate into the folder using package.json
   cd /home/ubuntu/app
 
-
+# Install the npm dependencies
   sudo npm install
   sudo npm install pm2 -g
   npm install
