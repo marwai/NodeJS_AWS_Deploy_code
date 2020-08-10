@@ -25,6 +25,7 @@
 
 # remove the old file and add our one
   sudo rm /etc/nginx/sites-available/default # test
+# Creates symbolic link
   sudo ln -s /home/ubuntu/environment/app/nginx.default /etc/nginx/sites-available/default # test
   sudo service nginx restart # test
 
@@ -32,7 +33,7 @@
 
 
 # Connecting to local hosts
-  export DB_HOST=mongodb://34.244.187.147:27017/posts
+  export DB_HOST=mongodb://54.216.111.231:27017/posts # export db ip:27017
   sudo apt-get update
 
 # To get into the app folder, you need to navigate into the folder using package.json
