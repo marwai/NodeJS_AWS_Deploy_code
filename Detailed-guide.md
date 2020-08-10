@@ -30,8 +30,9 @@ Allows us to rent infrastructure per second.
 # Entering the Instance
 1. First download the file to enter the EC2 instance
 2. The folder will be found in the downloads folder. In Git Bash run  the following command in the terminal 
-    $ cd
-    $ cd downloads/ 
+        
+        $ cd
+        $ cd downloads/ 
    
 3. Move the folder into a safe location where the ```.ssh keys``` are stored
        
@@ -49,11 +50,25 @@ what you please, but with care*
 5. You can enter run the Secure shell command to enter the EC2 virtual machine 
 
         ssh -i ~/.ssh/DevOpsStudents\ \(2\).pem ubuntu@52.214.19.30
-    
-    
+
+If ```successful the server listening on port 80``` Once the connection has been succesful you should be able to access 
+the web page through your ipv4 address created using a E2 instance on AWS.    
+
+# Running in the app VM
+```npm install ```
+
+```./provision.sh```
+
+```run pm2 start app.js```
+![Port80](images/port80.png)
+
+![working code](images/proof of working code with mongodb.png)
+
+![fibonacci](images/fibonacci.png)
+
 # Provisioning
 
-![prov1](images/prov1.png)
+![prov1](images/prov1.PNG)
 
 # Naming Value
 In AWS Name the keys an appropriate name:value key to distinguish your own own work with others like the example below 

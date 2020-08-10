@@ -40,17 +40,24 @@ recommended to run T2 micro machine for cost efficiency.
 
 ![picutre](images/proof%20of%20working%20code%20with%20mongodb.PNG)
 
-__ERRORS__ needs formatting
-
-Errors
-cd /etc
-mongod.conf was red - file is not there, can't add to file, fix this by:
-rm the mongod.conf and nano mongod.conf again 
 
 
-PASTE INTO MONGOD 	
-    # mongod.conf
+## __Errors__ and Solutions 
+If there are no errors, skip to the next steps
+
+(1) If mongod.conf is not found in /etc folder
+
+        cd/etc
     
+    
+(2)  mongod.conf was red - file is not there, can't add to file, fix this by:
+
+    rm the mongod.conf and nano mongod.conf again 
+
+
+(3) PASTE INTO MONGOD 	
+    
+    # mongod.conf
     # for documentation of all options, see:
     #   http://docs.mongodb.org/manual/reference/configuration-options/
     
@@ -91,28 +98,32 @@ PASTE INTO MONGOD
     
     #snmp:
 
-Steps 
-now sudo systemctl restart mongod
-Access denied so run sudo systemctl restart mongod 
-systemctl status mongod 
+(4) restart mongod and check the server is active  
 
-check env variables. 
-In provision env variable is set up, however env is not set up in the vm app folder, hence to be done manually:
-here we go again .. to create env variable . This should've been there, the db host 
+        $ sudo systemctl restart mongod
+        # Access denied so run sudo systemctl restart mongod 
+        $ systemctl status mongod 
 
-EXPORT THIS IN THE APP SSH 
-export DB_HOST=mongodb://ubuntu@34.244.187.147:27017/posts?authSource=admin
+(5) check environment variables.
+        
+    $ env  
+ 
+ (6) In provision env variable is set up, however env is not set up in the vm app folder, hence to be done manually:
+ to create env variable,This should've been there, the db host 
+
+    # EXPORT THIS IN THE APP SSH 
+    $ export DB_HOST=mongodb://ubuntu@34.244.187.147:27017/posts?authSource=admin
 
 
 Posts is still not there because ssh has been reboot and sync folders. Rebooting, means the following steps have to repeated 
 
 wait a few minutes before SSH into again 
 
-export DB_HOST=mongodb://34.244.187.147:27017/posts
+    export DB_HOST=mongodb://34.244.187.147:27017/posts
 
 NPM install in the app folder with json folder 
 
-
+    npm install
 NOTES TO KEEP
 
     #!/bin/bash
